@@ -23,10 +23,10 @@ State is a data stored inside a component whose change affects the UI. A state c
 Hooks are functions that have 'use' prefix.They can only be called at the top of a component. There are multiple built-in hooks provided by React.
 
 ## My Understanding
-React is basically a way to break the UI into small JavaScript functions called components.
-Each component returns a JSX.
-States allow components to remember things between renders.
-When a state changes, React re-renders the component.
+React is basically a way to break the UI into small JavaScript functions called components.   
+Each component returns a JSX.   
+States allow components to remember things between renders.   
+When a state changes, React re-renders the component.   
 
 ## What needs clarity
 - Why hooks need to be called at the top of a component?
