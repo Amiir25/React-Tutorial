@@ -54,7 +54,7 @@ Props don't need to be always static. They reflect a component's data not only a
 
 ### Conditional Rendering
 
-React components different things based on different conditions using if statement, ternary operator, and logical AND operator.
+React components display different things based on different conditions using if statement, ternary operator, and logical AND operator.
 
 ### Rendering Lists
 
@@ -69,19 +69,19 @@ React assumes every component is a pure function - a function that minds its own
 > At some point, somewhere, something has to change. That’s kind of the point of programming! These changes—updating the screen, starting an animation, changing the data—are called side effects. They’re things that happen “on the side”, not during rendering.
 
 ### Your UI as a Tree
-Trees are models used to show relationship between items. React creates a UI tree to show the relationship between components. UI trees are useful to understand how data flows in a React app.
+Trees are models used to show relationship between items. React creates a **UI tree** to show the relationship between components. UI trees are useful to understand how data flows in a React app.
 
-When a React app is rendered, the relationship between rendered components in a single render pass is represented in a model called render tree.
+When a React app is rendered, the relationship between rendered components in a single render pass is represented in a model called **Render tree**.
 
 Top-level components are the nearest components to the root component, are more complex, and affect the rendering flow of their child components. Leaf components, on the other hand, are the nearest components to the bottom of the tree, has no child components, and are frequently re-rendered.
 
-Module Dependency Tree represents the relationship between modules and the branchs of the tree represent the import statements of that module.
+**Module Dependency Tree** represents the relationship between modules and the branchs of the tree represent the import statements of that module.
 
 > When building a React app for production, there is typically a build step that will bundle all the necessary JavaScript to ship to the client. The tool responsible for this is called a bundler, and bundlers will use the dependency tree to determine what modules should be included.
 
 ## My Understanding
 - Components are a combination of JavaScript logic and HTML markup.
-- Define your component once and use it any where in your app with 'export' key word.
+- Define your component once and use it any where in your app using 'export' key word.
 - JSX = JavaScript + XHTML(HTML)
 
 ## What needs clarity
