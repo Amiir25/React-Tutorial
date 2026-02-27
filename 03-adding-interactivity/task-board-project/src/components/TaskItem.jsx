@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 
-const TaskItem = ({task, handleToggle, onDelete}) => {
+const TaskItem = ({task, onToggle, onDelete}) => {
 
-    const [toggle, setToggle] = useState(task.completed);
     const [confirmDelete, setConfirmDelete] = useState(false);
 
     const handleDelete = (e) => {
@@ -13,11 +12,11 @@ const TaskItem = ({task, handleToggle, onDelete}) => {
 
     return (
         <div
-        onClick={handleToggle}
+        onClick={() => onToggle(task.id)}
         className={`my-2 flex justify-between text-xl p-2 rounded cursor-pointer bg-gray-300
-        ${toggle && 'bg-gray-200'}`}>
+        ${task.completed && 'bg-gray-200'}`}>
 
-            <div className={`${toggle ? 'text-gray-400 line-through' : 'font-semibold'} flex gap-4`}>
+            <div className={`${task.completed ? 'text-gray-400 line-through' : 'font-semibold'} flex gap-4`}>
                 <p>{task.id}.</p>
                 <h1>
                     {task.text}
@@ -26,7 +25,7 @@ const TaskItem = ({task, handleToggle, onDelete}) => {
             
             <button
             onClick={() => setConfirmDelete(true)}
-            className={`${toggle ? 'text-gray-600' : 'text-rose-500'} font-semibold cursor-pointer`}>
+            className={`${task.completed ? 'text-gray-600' : 'text-rose-500'} font-semibold cursor-pointer`}>
                 Delete
             </button>
 

@@ -45,11 +45,11 @@ const App = () => {
       
       <TaskList filter={filter} setFilter={setFilter} tasks={filteredTasks} />
 
-      {console.log("Filter", filter)}
-      {console.log("Filtered Tasks", filteredTasks)}
+      {/* {console.log("Filter", filter)}
+      {console.log("Filtered Tasks", filteredTasks)} */}
 
-      {filteredTasks.map(task => (
-        <TaskItem key={task.id}
+      {filteredTasks.map((task, index) => (
+        <TaskItem key={index}
         task={task}
         onToggle={handleToggle}
         onDelete={handldeDelete} />
