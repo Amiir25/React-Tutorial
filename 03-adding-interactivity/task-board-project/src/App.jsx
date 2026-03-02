@@ -10,6 +10,7 @@ const App = () => {
   const [filter, setFilter] = useState('all');
 
   // Filtered tasks
+  // During render, React gives you a snapshot of state. Every render receives a fresh snapshot of tasks and filter.
   let filteredTasks = [];
   if (filter === 'active') {
     filteredTasks = tasks.filter(t => !t.completed);
