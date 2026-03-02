@@ -5,7 +5,7 @@ const TaskItem = ({task, onToggle, onDelete}) => {
     const [confirmDelete, setConfirmDelete] = useState(false);
 
     const handleDelete = (e) => {
-        e.stopPropagation();
+        e.stopPropagation(); // Without this, Delete click would also toggle task.
         onDelete(task.id);
         setConfirmDelete(false);
     }
