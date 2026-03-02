@@ -37,6 +37,8 @@ State is fully private to the component declaring it. Even parent components hav
 
 > You can have more than one state variable. Internally, React matches them up by their order.
 
+**State should only store the source of truth, not calculated values.**
+
 ### Render and Commit
 
 Displaying a component on a screen passes three steps:
@@ -115,3 +117,4 @@ In JavaScript, array is just another kind of objects. A state with array value s
 - Hooks allow you to hook-into React featrues like state
 - State actually “lives” in React itself, as if on a shelf!, outside of the function.
 - Nested objects are not actually nested. Instead, they are separate objects “pointing” at each other with properties.
+- Data flows downward, Events flow upward
