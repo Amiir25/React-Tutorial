@@ -4,7 +4,7 @@ This topic covers how to structure a state well, how to keep a state update logi
 
 ### Reacting to Input with State
 
-React doesn't use imperative UI programming, i.e dealing with individual pieces of UI separately. Instead, it uses declarative way of manipulating UI which allows describing the different states that a component can be in and switching between them in response to user input.
+React doesn't use imperative UI programming, i.e dealing with individual pieces of UI separately. Instead, it uses declarative way of manipulating UI which allows declaring the different states that a component can be in and switching between them in response to user input.
 
 Declarative way of manipulating UI has the following steps:
 
@@ -18,11 +18,11 @@ There are two types of inputs that can trigger state updates which of both need 
 - Human inputs - clicking, typing
 - Computer inputs - network response, image loading
 
-3. Representing the state in memory using useState
+3. Representing the states in memory using useState
 
 Add enough state that represent all the possible visual states.
 
-4. Removing any non-essential state variables
+4. Removing any non-essential state variable
 
 > Refactoring your state structure will make your components easier to understand, reduce duplication, and avoid unintended meanings. Your goal is to prevent the cases where the state in memory doesn’t represent any valid UI that you’d want a user to see.
 
@@ -36,12 +36,12 @@ A well structured state makes a component easy to modify and debug. The followin
 
 1. **Group related states:** if multiple states are always updated at the same time, consider merging them.
 
-2. **Avoid contradictions in state:** don't structure your states in a way that make them contradict and disagree with each other.
+2. **Avoid contradictions in state:** don't structure your states in a way that makes them contradict and disagree with each other.
 
 3. **Avoid redundant state:** don't create a state variable to put an information you can get from a prop or another state variable.
 
-`function Message({ messageColor }) {`
-  `const [color, setColor] = useState(messageColor);`
+`function Message(props) {`
+  `const [color, setColor] = useState(props.messageColor);`
 
 This code is an example of redundant state which is called mirroing a prop in a state.
 
@@ -114,24 +114,22 @@ Context can be applied in three steps:
 1. Create a context
 
 `import { createContext } from 'react';`
-`export const nameContext = createContext(1)`
+`export const myContext = createContext(defaultValue)`
 
 The context should be exported so that other components can access it. The only argument of createContext() is the default value.
 
 2. Use the created context from the component that needs the data
 
-import the useContext() hook and the created context inside the component that needs the data. Now, instead of props, the component reads the data directly from the context.
+Pass the created context to useContext() hook inside the component that needs the data. Now, instead of props, the component reads the data directly from the context.
 
 `import { useContext } from 'react';`
 `import { contextName } from './contextName.js';`
 
-`const data = useContext(contextName);` This tells React that  this component want to read the 'contextName' context.
-
-
+`const data = useContext(contextName);` This tells React that this component want to read the 'contextName' context.
 
 3. Provide the context from the component that specifies the data
 
-
+> Context is very tempting to use! However, this also means it’s too easy to overuse it. Just because you need to pass some props several levels deep doesn’t mean you should put that information into context.
 
 
 
