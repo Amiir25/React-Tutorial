@@ -79,7 +79,7 @@ By default, React preserves states of components in the same position. To overri
 
 ### Extracting State Logic into a Reducer
 
-Avoid the overwhelming of spreading multiple state updates across multiple event handlers by usign Reducer. Reducer is a function ouside a component that handles all the state logic of the component.
+Reducer Avoid the overwhelming of spreading multiple state updates across multiple event handlers. It is a function that handles all the state logic of a component outside the component.
 
 Migrating from useState to useReducer has three steps:
 
@@ -103,7 +103,7 @@ A reducer function is the palce where state logic happens. The function takes th
 
 Finally, the reducer function will hook up with the component by using useReducer hook inside the component. The hook takes two arguments, a reducer function and an initial state. It returns a stateful value and a dispatch function (to dispatch user action to reducer)
 
-`const [state, dispatch] = useReducer(reducerFunction, action);`
+`const [state, dispatch] = useReducer(reducerFunction, initialState);`
 
 ### Passing Data Deeply with Context
 
