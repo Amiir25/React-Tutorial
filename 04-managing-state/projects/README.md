@@ -265,4 +265,38 @@ This forces you to think about render logic vs state.
 This is a perfect intermediate React exercise, harder than a form, different from task manager, teaches real state design.
 
 
-#
+## 🧩 Micro Project 3: Shopping Cart Manager
+
+### Features
+
+Cart items:
+- Apple
+- Banana
+- Orange
+
+Each item has:
+- name
+- price
+- quantity
+
+Required Actions
+- Add item
+- Remove item
+- Increase quantity
+- Decrease quantity
+- Clear cart
+
+Concepts This Project Reinforces
+
+From Adding Interactivity
+
+✔ responding to events
+✔ updating arrays
+✔ updating objects
+✔ derived state
+
+From Managing State
+
+✔ reducer pattern
+✔ centralized state logic
+✔ predictable state transitions
