@@ -267,7 +267,7 @@ This is a perfect intermediate React exercise, harder than a form, different fro
 
 ## 🧩 Micro Project 3: Shopping Cart Manager
 
-### Features
+Features
 
 Cart items:
 - Apple
@@ -300,3 +300,27 @@ From Managing State
 ✔ reducer pattern
 ✔ centralized state logic
 ✔ predictable state transitions
+
+## 🧩 Theme Switcher Dashboard
+
+This project is small but demonstrates deep data passing.
+
+The theme must be accessible everywhere.
+
+theme = "light" | "dark"
+
+Features
+
+- Toggle theme
+Light → Dark
+Dark → Light
+
+Deep components use theme
+
+Example:
+
+- Header background
+- Card background
+- Text color
+ 
+Avoid prop drilling. No passing theme like Dashboard → Header → Toggle. Instead use Context.
