@@ -1,0 +1,21 @@
+import { Link } from 'react-router-dom'
+
+const ProductCard = ({product}) => {
+  return (
+    <div key={product.id} className='bg-white'>
+        <div className='h-52 mb-4'>
+            <img src={product.image} alt={product.name} className='w-full h-full object-cover' />
+        </div>
+        <div className='font-semibold p-2'>
+            <h2>{product.name}</h2>
+            <p className='text-blue-600 my-2'>${product.price}</p>
+            <div className='flex items-center gap-4'>
+                <Link className='bg-gray-600 text-white px-2 py-1 rounded cursor-pointer'>View Detail</Link>
+                <button className='bg-blue-600 text-white px-2 py-1 rounded cursor-pointer'>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default ProductCard
