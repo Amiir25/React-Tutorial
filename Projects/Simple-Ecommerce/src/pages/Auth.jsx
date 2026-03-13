@@ -10,7 +10,7 @@ const Auth = () => {
   const navigate = useNavigate();
   const {register, handleSubmit, formState: {errors}} = useForm();
 
-  const {signup, user, logout, login} = useContext(AuthContext);
+  const {signup, login} = useContext(AuthContext);
 
   const onSubmit = (data) => {
     setError(null);
@@ -34,9 +34,6 @@ const Auth = () => {
   return (
     <section className='w-full h-full mt-20'>
       <div className='w-75 bg-white rounded mx-auto p-4'>
-        
-        {user && <p>User logged in: {user.email} </p>}
-        <button onClick={logout}>Logout</button>
         
         <h1 className='text-3xl font-bold'>
           {mode === "signup" ? 'Sign Up' : 'Login'}
