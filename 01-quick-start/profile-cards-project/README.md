@@ -2,6 +2,8 @@
 
 A small React project built after finishing the Quick Start section of the React documentation.
 
+![Project Image](./quick-start-project-image.png)
+
 ## Project Goal
 
 This project reinforces the core fundamentals of React:
@@ -27,9 +29,9 @@ This project reinforces the core fundamentals of React:
 
 ## Component Structure
 
-profile-cards/
-└── src/
-  ├── App.jsx
+profile-cards/   
+└── src/   
+  ├── App.jsx   
   └── ProfileCard.jsx
 
 **App.jsx**
