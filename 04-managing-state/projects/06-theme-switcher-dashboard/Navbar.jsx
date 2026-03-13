@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from './ThemeContext'
+import { useTheme } from './ThemeContext'
 
 const Navbar = () => {
 
-    const {darkTheme , setDarkTheme} = useContext(ThemeContext);
+    const {darkTheme , setDarkTheme} = useTheme()
 
     return (
         <nav className={`flex items-center justify-between py-4

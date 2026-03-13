@@ -1,9 +1,8 @@
-import React, { useContext } from 'react'
-import { ThemeContext } from './ThemeContext'
+import { useTheme } from './ThemeContext'
 
 const Hero = () => {
 
-    const { darkTheme } = useContext(ThemeContext);
+    const { darkTheme } = useTheme();
 
     return (
         <section className={`flex flex-col items-center justify-center gap-4 h-[70vh]
