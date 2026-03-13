@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Links } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 
 const Navbar = () => {
@@ -20,7 +20,7 @@ const Navbar = () => {
             {/* Links */}
             <div className='flex items-center gap-6'>
                 <a href="">Home</a>
-                <a href="">Checkout</a>
+                <Link to='/checkout'>Checkout</Link>
                 <a href="">About</a>
                 <a href="">Contact</a>
             </div>
