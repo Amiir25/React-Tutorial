@@ -2,7 +2,7 @@
 
 This topic covers how to structure a state well, how to keep a state update logic maintainable, and how to share state between distant components.
 
-### Reacting to Input with State
+### 01. Reacting to Input with State
 
 React doesn't use imperative UI programming, i.e dealing with individual pieces of UI separately. Instead, it uses declarative way of manipulating UI which allows declaring the different states that a component can be in and switching between them in response to user input.
 
@@ -30,7 +30,7 @@ Add enough state that represent all the possible visual states.
 
 Finally, create event handlers that updates the states.
 
-### Choosing the State Structure
+### 02. Choosing the State Structure
 
 A well structured state makes a component easy to modify and debug. The following are principles for structuring states:
 
@@ -53,7 +53,7 @@ Don’t put props into state unless you specifically want to prevent updates.
 
 5. **Avoid deeply nested state:** the more hierarchical a state is the more difficult to update.
 
-### Sharing State Between Components
+### 03. Sharing State Between Components
 
 If the state of two components always changes together, put the state in the closest common parent component and pass it as a prop. This is called lifting state up.
 
@@ -61,7 +61,7 @@ Components can be "Controlled" by their parent components or "Uncontrolled". Con
 
 > For each unique piece of state, you will choose the component that “owns” it. This principle is also known as having a “single source of truth”.
 
-### Preserving and Resetting State
+### 04. Preserving and Resetting State
 
 States don't live inside components. They live inside React. React associates each state with the correct component based on its position in the render tree.
 
@@ -77,7 +77,7 @@ Switching between different components at the same position resets the state of 
 
 By default, React preserves states of components in the same position. To override this, you can either render a component in different position or use key value to separate between components.
 
-### Extracting State Logic into a Reducer
+### 05. Extracting State Logic into a Reducer
 
 Reducer Avoid the overwhelming of spreading multiple state updates across multiple event handlers. It is a function that handles all the state logic of a component outside the component.
 
@@ -105,7 +105,7 @@ Finally, the reducer function will hook up with the component by using useReduce
 
 `const [state, dispatch] = useReducer(reducerFunction, initialState);`
 
-### Passing Data Deeply with Context
+### 06. Passing Data Deeply with Context
 
 Context is an alternative of passing props. It allows parent components pass data to the entire child component in the tree without using props.
 
