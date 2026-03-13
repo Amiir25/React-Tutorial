@@ -265,7 +265,7 @@ This forces you to think about render logic vs state.
 This is a perfect intermediate React exercise, harder than a form, different from task manager, teaches real state design.
 
 
-## 🧩 Micro Project 3: Shopping Cart Manager
+## 🧩 Micro Project 5: Shopping Cart Manager
 
 Features
 
@@ -301,7 +301,7 @@ From Managing State
 ✔ centralized state logic
 ✔ predictable state transitions
 
-## 🧩 Theme Switcher Dashboard
+## 🧩 Micro Project 6: Theme Switcher Dashboard
 
 This project is small but demonstrates deep data passing.
 
