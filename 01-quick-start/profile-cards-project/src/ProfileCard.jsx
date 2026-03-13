@@ -29,9 +29,9 @@ const ProfileCard = ({ name, role, bio, handleCount }) => {
                     </button>
                     {/*
                     (prev => !prev)
-                    This is a short form of arrow function. The prev is the argument the second is the return value.
-                    React calls this function passing the current state and calls the setShowBio function passing
-                    its return value i.e !prev.*/}
+                    This is a short form of arrow function. The first prev is the argument and the second is the
+                    return value. React calls this function passing the current state and calls the setShowBio
+                    function passing its return value i.e !prev.*/}
                 </div>
                 <p className={`text-sm h-0 opacity-0 ${showBio && 'h-4 opacity-100'}
                      transition-all duration-200`}>
