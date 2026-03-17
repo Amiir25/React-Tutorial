@@ -324,3 +324,41 @@ Example:
 - Text color
  
 Avoid prop drilling. No passing theme like Dashboard → Header → Toggle. Instead use Context.
+
+## 🧩 Micro Project 7: Global Todo Manager
+
+The goal is to remove prop drilling and centralize logic.
+
+Key idea:
+
+- Reducer manages state
+- Context provides it globally
+- Components dispatch actions
+
+Actions
+
+Your reducer should support:
+- Add Todo
+- Toggle Todo
+- Delete Todo
+- Clear Completed
+
+Important Rules
+
+While building this project:
+
+Rule 1 - Do not pass todos as props. Always use `useContext`.
+Rule 2 - All state updates must go through `dispatch()`. Never mutate state.
+Rule 3 - Derived values should not be stored in state. Compute during render.
+
+What This Project Teaches
+
+This project combines three big ideas:
+1. Centralized state logic - Reducer.
+2. Global state access - Context.
+3. Clean component architecture. Components only describe UI.
+
+Bonus Challenge (Optional)- Add filter buttons:
+- All | Active | Completed
+
+But remember, filter is state - filteredTodos is derived
