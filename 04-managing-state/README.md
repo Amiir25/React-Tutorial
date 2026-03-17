@@ -131,20 +131,15 @@ Pass the created context to useContext() hook inside the component that needs th
 
 > Context is very tempting to use! However, this also means it’s too easy to overuse it. Just because you need to pass some props several levels deep doesn’t mean you should put that information into context.
 
+### 07. Scaling Up with Reducer and Context
 
+Combining reducers and context together make managing state of a complex screen easier.
 
+Here are the three easy steps to combine a reducer with context:
 
-
-
-
-
-
-
-
-
-
-
-
+1. Create the context.
+2. Put state and dispatch into context.
+3. Use context anywhere in the tree.
 
 ## Bullet Points
 
