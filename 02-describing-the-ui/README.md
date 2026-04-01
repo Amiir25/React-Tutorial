@@ -6,7 +6,7 @@ This topic covers how to create, cutomize and conditionally display React compon
 
 React allows to combine markup, CSS, and JavaScript into a custome, reusable UI elements called Components. Components are the building blocks of UI. They can be ordered and nested like HTML tags do.   
 
-> "A React component is a JavaScript function that you can sprinkle with markup."   
+> A React component is a JavaScript function that you can sprinkle with markup.
 
 **Component Rules**
 
@@ -20,7 +20,7 @@ Reusability is one of the core functionalities of React components. This can be 
 
 There are two ways of exporting a component, **default exports** and **named exports**. The first applied by adding 'default export' key words on the component where as the second uses only 'export' key word. A file can only have one default export but no limit for named exports.
 
-The way a component is exported defines how it must be imported. It is allowd to give any name for default exports while importing them. In the contrary, the name of named exports should much on both sides, and also, the imported name should be inside curly braces.
+The way a component is exported defines how it must be imported. It is allowd to give any name for default exports while importing them. In the contrary, the name of named exports should much on both sides and, also, the imported name should be inside curly braces.
 
 ### Writing Markup with JSX
 
@@ -29,7 +29,7 @@ JSX refers to a syntax extension that allows writing HTML elements inside a Java
 **JSX Rules**
 
 - Return one single element. If the elements are multiple, wrap them in one parent element or an empty element called Fragment.
-- Close every tag including self closing tags like <img /> instead of <img>.
+- Close every tag including self closing tags like `<img />` instead of `<img>`.
 - Write variables and attributes in camelCase.
 
 ### JavaScript in JSX With Curly Braces
@@ -50,7 +50,7 @@ It is allowed to nest components in the same way that HTML elements are nested. 
 
 Props don't need to be always static. They reflect a component's data not only at the begining but also at any point in time.
 
-> "Props are immutable. When a component needs to change its props, it will have to 'ask' its parent component to pass it different props—a new object! Its old props will then be cast aside, and eventually the JavaScript engine will reclaim the memory taken by them."
+> Props are immutable. When a component needs to change its props, it will have to 'ask' its parent component to pass it different props—a new object! Its old props will then be cast aside, and eventually the JavaScript engine will reclaim the memory taken by them.
 
 ### Conditional Rendering
 
@@ -60,7 +60,7 @@ React components display different things based on different conditions using if
 
 React allows displaying multiple similar components from a collection of data using JavaScript array methods like filter() and map(). JSX elements directly inside a map() call need a 'key' - a value that uniquely identifies them in the list. Using array index as key is not recommended. Likewise, creating keys on the fly may create errors.
 
-When each item in a list needs to render multiple JSX element, wrap them in a <div> or <Fragment> elements.
+When each item in a list needs to render multiple JSX element, wrap them in a `<div>` or `<Fragment>` elements.
 
 ### Keeping Components Pure
 
