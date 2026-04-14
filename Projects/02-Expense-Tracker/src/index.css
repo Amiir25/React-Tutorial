@@ -7,3 +7,7 @@
   --color-mirage: #141729;
   --color-mischka: #dcdee5;
 }
+
+body {
+  background-color: #f2f4f7;
+}
